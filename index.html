@@ -334,6 +334,18 @@ var gSelectedMenuStructure = {
   drink: 0,
   priceVND: 0
 }
+var gDiscountVouchers = [
+  { voucherID:"A1", percentDiscount: 20 },   // mã giảm giá là A1, phần trăm giảm giá 20%
+  { voucherID:"A2", percentDiscount: 10 },
+  { voucherID:"A3", percentDiscount: 5 },
+  { voucherID:"A4", percentDiscount: 30 },
+  { voucherID:"A5", percentDiscount: 20 },
+  { voucherID:"B1", percentDiscount: 25 },
+  { voucherID:"B2", percentDiscount: 15 },
+  { voucherID:"B3", percentDiscount: 5 },
+  { voucherID:"B4", percentDiscount: 30 },
+  { voucherID:"B5", percentDiscount: 40 }  
+];
 // bạn có thể dùng để lưu loại pizza đươc chọn, mỗi khi khách chọn, bạn lại đổi giá trị cho nó
 var gSelectedPizzaType = "..." ;
 //khai báo get cho sever
@@ -440,19 +452,17 @@ function onButtonSendClick() {
     message:"",
     voucher: ""
   }
-  
+  debugger;
   getFormData(vPerson);
   var vIsValidData = validateData(vPerson);//kiểm tra dữ liệu
-  var vXmlHttp = new XMLHttpRequest();
-  if (vPerson.voucher === "" ){
+  if (vIsValidData === false && vPerson.voucher === "" ){
+    alert("Vui lòng nhập thông tin");
+  }else if( vIsValidData === true && vPerson.voucher === "" ){
     vPriceElement = gSelectedMenuStructure.priceVND;
     vDiscountElement = 0;
     showData();
   }else{
-    //gửi request cho sever
-    sendRequestCheckVoucherCode(vPerson,vXmlHttp);
-    //xử lý front end
-    handleVoucherReponse(vXmlHttp);
+    getVoucher();
     //ghi dữ liệu vào vùng màu vàng
     showData();
   }
@@ -547,28 +557,26 @@ function validateData(paramPerson) {
   }
   return true;
 }
-//hàm gửi request cho sever check mã giảm giá
-function sendRequestCheckVoucherCode(paramPerson,paramXmlHttp){      
-  paramXmlHttp.open("GET", "http://42.115.221.44:8080/devcamp-voucher-api/voucher_detail/" + paramPerson.voucher, false);
-  paramXmlHttp.send();
-  }
-//hàm nhận response và hiển thị front end
-function handleVoucherReponse(paramXmlHttp){
+//hàm kiểm tra voucher
+function getVoucher() {
   "use strict";
-  // nhận về response và xử lý
-  var vResultCheckElement = 0;
-  var vStatusCode = paramXmlHttp.status;
-  // nếu trạng thái trả về thành công!
-  if (vStatusCode == gREQUEST_STATUS_FINISH_AND_OK) {
-    // nhận lại response dạng JSON ở xmlHttp.responseText và chuyển thành object
-    var bVoucherResponse = JSON.parse(paramXmlHttp.responseText);
-    vResultCheckElement = Number(bVoucherResponse.phanTramGiamGia);
-    vDiscountElement = gSelectedMenuStructure.priceVND*(vResultCheckElement/100);
-    vPriceElement = gSelectedMenuStructure.priceVND-vDiscountElement;
-  }else{//điều kiện nếu voucher không tồn tại
-    alert("Mã Voucher không tồn tại");    
+  var vVoucher = vVoucherElement.value;
+  var vFound = false;
+  var vIndex = 0;
+  while (!vFound && vIndex < gDiscountVouchers.length){
+    if (gDiscountVouchers[vIndex].voucherID == vVoucher) {
+      var vResultCheckElement= gDiscountVouchers[vIndex].percentDiscount;
+      vDiscountElement = gSelectedMenuStructure.priceVND*(vResultCheckElement/100);
+      vPriceElement = gSelectedMenuStructure.priceVND-vDiscountElement;      
+      vFound = true;
+    }else{
+      vIndex ++ ;
+    }
+  }  
+  if(vFound == false){
     vPriceElement = gSelectedMenuStructure.priceVND;
     vDiscountElement = 0;
+    alert("Mã Voucher không tồn tại");
   }
   return vPriceElement, vDiscountElement;
 }
