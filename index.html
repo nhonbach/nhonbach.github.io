@@ -236,18 +236,12 @@
         </div>
       </div>
 
-      <div class="col-sm-12 text-center p-4 mt-4">
-        <h2><b class="p-2 border-bottom">Chọn loại đồ uống</b></h2>
-        <select id="select-drink" name="country" class="form-control" >
-          <option selected>Chọn một loại đồ uống...</option>
-        </select> 
-      </div>
-
       <div id="contact" class="row">
         <!-- Title Contact Us -->
         <div class="col-sm-12 text-center p-4 mt-4">
           <h2><b class="p-2 border-bottom">Gửi đơn hàng</b></h2>
         </div>
+
         <!-- Content Contact Us -->
         <div class="col-sm-12 p-2 jumbotron">
           <div class="row">
@@ -312,9 +306,6 @@
 <script>
 "use strict";
 /*** REGION 1 - Global variables - Vùng khai báo biến, hằng số, tham số TOÀN CỤC */
-//khai báo kết quả của API
-const gREQUEST_STATUS_OK = 200;
-const gREQUEST_READY_STATUS_FINISH_AND_OK = 4;
 //khai báo biến 3 loại combo
 var vSmallButton = document.getElementById("button-small");
 var vMediumButton = document.getElementById("button-medium");
@@ -333,8 +324,6 @@ var vDienThoaiElement = document.getElementById("inp-dien-thoai");
 var vDiaChiElement = document.getElementById("inp-dia-chi");
 var vMesageElement = document.getElementById("inp-message");
 var vVoucherElement = document.getElementById("inp-voucher");
-//khai báo nước uống
-var vDrinkSelectElement = document.getElementById("select-drink");
 // bạn có thể dùng để lưu trữ combo được chọn, 
 // mỗi khi khách chọn menu S, M, L bạn lại đổi giá trị properties của nó
 var gSelectedMenuStructure = {
@@ -352,7 +341,7 @@ const gREQUEST_STATUS_FINISH_AND_OK = 200;
 var vPriceElement = 0; //giá thực trả sau khi giảm giá
 var vDiscountElement = 0; //giá discount
 /*** REGION 2 - Vùng gán / thực thi hàm xử lý sự kiện cho các elements */
-getDrinkData();
+
 /*** REGION 3 - Event handlers - Vùng khai báo các hàm xử lý sự kiện */
 //selected the size S
 function onSmallClick(){
@@ -449,18 +438,17 @@ function onButtonSendClick() {
     dienthoai: 0,
     diachi: "",
     message:"",
-    voucher: "",
-    douong: ""
+    voucher: ""
   }
+  
   getFormData(vPerson);
   var vIsValidData = validateData(vPerson);//kiểm tra dữ liệu
-
-  if (vIsValidData === true && vPerson.voucher === "" ){
+  var vXmlHttp = new XMLHttpRequest();
+  if (vPerson.voucher === "" ){
     vPriceElement = gSelectedMenuStructure.priceVND;
     vDiscountElement = 0;
     showData();
   }else{
-    var vXmlHttp = new XMLHttpRequest();
     //gửi request cho sever
     sendRequestCheckVoucherCode(vPerson,vXmlHttp);
     //xử lý front end
@@ -500,7 +488,6 @@ function showData(){
   vDivSubjectInforElement.innerHTML += "<br/>Nước ngọt: " + gSelectedMenuStructure.drink;
   vDivSubjectInforElement.innerHTML += "<br/>----------------------------------------";
   vDivSubjectInforElement.innerHTML += "<br/>Loại Pizza: " + gSelectedPizzaType;
-  vDivSubjectInforElement.innerHTML += "<br/>Loại nước uống: " + vDrinkSelectElement.options[vDrinkSelectElement.selectedIndex].value;
   vDivSubjectInforElement.innerHTML += "<br/>Mã voucher: " + vVoucherElement.value;
   vDivSubjectInforElement.innerHTML += "<br/>Giá vnd: " + gSelectedMenuStructure.priceVND;
   vDivSubjectInforElement.innerHTML += "<br/>Discount %: " + vDiscountElement;
@@ -519,7 +506,6 @@ function showData(){
   console.log("Nước ngọt: " + gSelectedMenuStructure.drink);
   console.log("----------------------------------------");
   console.log("Loại Pizza: " + gSelectedPizzaType);
-  console.log("<br/>Loại nước uống: " + vDrinkSelectElement.options[vDrinkSelectElement.selectedIndex].value);
   console.log("Mã voucher: " + vVoucherElement.value);
   console.log("Giá vnd: " + gSelectedMenuStructure.priceVND);
   console.log("Discount %: " + vDiscountElement);
@@ -535,15 +521,10 @@ function getFormData(paramPerson) {
   paramPerson.diachi = vDiaChiElement.value.trim();
   paramPerson.message = vMesageElement.value.trim();
   paramPerson.voucher = vVoucherElement.value.trim();
-  paramPerson.douong = vDrinkSelectElement.options[vDrinkSelectElement.selectedIndex].text;
 }
 
 //hàm kiểm tra dữ liệu nhập trên form
 function validateData(paramPerson) {
-  if (paramPerson.douong === "Chọn một loại đồ uống...") {
-    alert("Vui lòng chọn đồ uống");
-    return false;
-  }
   "use strict";
   if (paramPerson.fullname === "") {
     alert("Phải nhập vào tên");
@@ -564,7 +545,6 @@ function validateData(paramPerson) {
     alert("Phải nhập vào địa chỉ");
     return false;
   }
-
   return true;
 }
 //hàm gửi request cho sever check mã giảm giá
@@ -591,28 +571,7 @@ function handleVoucherReponse(paramXmlHttp){
     vDiscountElement = 0;
   }
   return vPriceElement, vDiscountElement;
-}
-//hàm option đồ uống
-function getDrinkData(){
-  "use strict";
-  var vBASE_URL ="http://42.115.221.44:8080/devcamp-pizza365/drinks";
-  var vXhttp = new XMLHttpRequest();
-  vXhttp.open("GET", vBASE_URL, true);
-  vXhttp.send();
-  vXhttp.onreadystatechange = function() {
-    if (this.readyState == gREQUEST_READY_STATUS_FINISH_AND_OK && this.status == gREQUEST_STATUS_OK) {
-      var vDrinkObject = JSON.parse(vXhttp.responseText);
-      console.log(vDrinkObject);
-      
-      for(var j = 0; j < vDrinkObject.length; j ++) {
-        var bDrinkOptionElement = document.createElement("option");
-        bDrinkOptionElement.value = vDrinkObject[j].maNuocUong;
-        bDrinkOptionElement.text = vDrinkObject[j].tenNuocUong;
-        vDrinkSelectElement.appendChild(bDrinkOptionElement);
-      }
-    }
-   
-  }
+  debugger;
 }
 </script>
 </body>
