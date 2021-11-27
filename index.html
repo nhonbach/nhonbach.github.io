@@ -1,585 +1,276 @@
 <!DOCTYPE html>
 <html>
-<title> Bootstrap template- Pizza 365 project</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<body>
-
-<!-- Menu -->
-<div class="container-fluid bg-light">
-  <div class="row">
-    <div class="col-sm-12">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#plans">Plans</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-</div>
-
-<!-- Content -->
-<div class="container" style="padding: 120px 0 50px 0;">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="row">
-        <!-- Title row home -->
-        <div class="col-sm-12">
-          <h1><b>PIZZA ITALIAN NHƠN BÁCH !</b></h1> 
-        </div>
-
-        <!-- Slide row home -->
-        <div class="col-sm-12">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="images/mon_y_1.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/mon_y_2.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/mon_y_3.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/mon_y_4.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/mon_y_5.jpg" alt="Third slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Title what we offer -->
-        <div class="col-sm-12 text-center p-4 mt-4">
-          <h2><b class="p-2 border-bottom">Tại sao lại Pizza Nhơn Bách</b></h2>
-        </div>
-
-        <!-- Content what we offer -->
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-3 p-4 bg-white border">
-              <h3 class="p-2">Hương Vị</h3>
-              <p class="p-2">Không dễ để có thể tìm được hương vị như vậy ở nơi khác !</p>
-            </div>
-            <div class="col-sm-3 p-4 bg-light border">
-              <h3 class="p-2">Thương Hiệu</h3>
-              <p class="p-2">Chúng tôi có truyền thống làm pizza Ý tại Sài Gòn đã 10 năm!</p>
-            </div>
-            <div class="col-sm-3 p-4 bg-secondary text-white border">
-              <h3 class="p-2">Giao Hàng</h3>
-              <p class="p-2">Hệ thống giao hàng rộng khắp Sài Gòn sẽ không làm bạn thất vọng</p>
-            </div>
-            <div class="col-sm-3 p-4 bg-dark text-white border">
-              <h3 class="p-2">Phục vụ</h3>
-              <p class="p-2">Chúng tôi tự hào là cửa hàng có thái độ phục vụ hàng đầu thành phố</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="plans" class="row">
-        <!-- Title what we offer -->
-        <div class="col-sm-12 text-center p-4 mt-4">
-          <h2><b class="p-1 border-bottom">Menu Combo Pizza Nhơn Bách</b></h2>
-          <p><span class="p-2">Hãy chọn cỡ pizza phù hợp với bạn!</span></p>
-        </div>
-        <!-- Content what we offer -->
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header bg-dark text-white text-center">
-                  <img src="images/size S.PNG" class="card-img-top" width="250px" height="223px">
-                  <h3>S (Small)</h3>
-                </div>
-                <div class="card-body text-center">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>20cm</b> Đường kính</li>
-                    <li class="list-group-item"><b>2</b> Sườn nướng</li>
-                    <li class="list-group-item"><b>200 g</b> Salad</li>
-                    <li class="list-group-item"><b>2</b> Nước ngọt</li>
-                    <li class="list-group-item"><h1><b>150.000</b></h1> VND</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                  <button id="button-small" onclick="onSmallClick()" class="btn btn-success">Chọn</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header bg-secondary text-white text-center">
-                  <img src="images/size M.PNG" width="300px" height="60%">
-                  <h3>M (Medium)</h3>
-                </div>
-                <div class="card-body text-center">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>25cm</b> Đường kính</li>
-                    <li class="list-group-item"><b>4</b> Sườn nướng</li>
-                    <li class="list-group-item"><b>300 g</b> Salad</li>
-                    <li class="list-group-item"><b>3</b> Nước ngọt</li>
-                    <li class="list-group-item"><h1><b>200.000</b></h1> VND</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                  <button id="button-medium" onclick="onMediumClick()" class="btn btn-success" >Chọn</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-header bg-dark text-white text-center">
-                  <img src="images/size L.jpg" width="285px" height="80%" >
-                  <h3>L (Large)</h3>
-                </div>
-                <div class="card-body text-center">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>30cm</b> Đường kính</li>
-                    <li class="list-group-item"><b>8</b> Sườn nướng</li>
-                    <li class="list-group-item"><b>500 g</b> Salad</li>
-                    <li class="list-group-item"><b>4</b> Nước ngọt</li>
-                    <li class="list-group-item"><h1><b>250.000</b></h1> VND</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                  <button id="button-large" onclick="onLargeClick()" class="btn btn-success">Chọn</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="about" class="row">
-        <!-- Title Who We Are -->
-        <div class="col-sm-12 text-center p-4 mt-4">
-          <h2><b class="p-2 border-bottom">Chọn loại Pizza</b></h2>
-        </div>
-
-        <!-- Content Who We Are -->
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="card w-100" style="width: 18rem;">
-                <img src="images/pizza_type_1.jpg" class="card-img-top">
-                <div class="card-body">
-                  <h3>Pizza Hawaian</h3>
-                  <p>Phủ giăm bông và thơm ngọt dịu trên nền sốt cà chua truyền thống</p><br><br>
-                  <p><button id="button-hawai" class="btn btn-info w-100" onclick="onHawaiClick()">Chọn</button></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card w-100" style="width: 18rem;">
-                <img src="images/pizza_type_2.jpg" class="card-img-top">
-                <div class="card-body">
-                  <h3>Pizza Hải sản</h3>
-                  <p>Mực, thanh cua, thơm, ớt chuông xanh, hành tây và phô mai Mozzarella trên nền xốt Cheesy Mayo và phô mai Mozzarella thượng hạng</p>
-                  <p><button id="button-seafood" class="btn btn-info w-100" onclick="onSeaFoodClick()">Chọn</button></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card w-100" style="width: 18rem;">
-                <img src="images/pizza_type_3.jpg" class="card-img-top">
-                <div class="card-body">
-                  <h3>Pizza Bacon</h3>
-                  <p>Thơm ngon và giàu protein với thịt xông khói, xúc xích, thịt bò, giăm bông và pepperoni</p><br>
-                  <p><button id="button-bacon" class="btn btn-info w-100" onclick="onBaconClick()">Chọn</button></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="contact" class="row">
-        <!-- Title Contact Us -->
-        <div class="col-sm-12 text-center p-4 mt-4">
-          <h2><b class="p-2 border-bottom">Gửi đơn hàng</b></h2>
-        </div>
-
-        <!-- Content Contact Us -->
-        <div class="col-sm-12 p-2 jumbotron">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <label for="fullname">Họ và tên</label>
-                <input type="text" class="form-control" id="inp-fullname" placeholder="Họ và tên">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="inp-email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="dien-thoai">Điện thoại</label>
-                <input type="text" class="form-control" id="inp-dien-thoai" placeholder="Điện thoại">
-              </div>
-              <div class="form-group">
-                <label for="dia-chi">Địa chỉ</label>
-                <input type="text" class="form-control" id="inp-dia-chi" placeholder="Địa chỉ">
-              </div>
-              <div class="form-group">
-                <label for="message">Lời nhắn</label>
-                <input type="text" class="form-control" id="inp-message" placeholder="Lời nhắn">
-              </div>
-              <div class="form-group">
-                <label for="voucher">Mã giảm giá (Voucher ID)</label>
-                <input type="text" class="form-control" id="inp-voucher" placeholder="Mã giảm giá (Voucher ID)">
-              </div>
-              <button id="button-send" type="button" class="btn btn-info w-100" onclick="onButtonSendClick()">Gửi đơn</button>
-            </div>
-          </div>
-        </div>
-        <!-- vùng hiển thị thông tin đơn hàng(order) -->
-        <div id="div-container-order" class="container bg-info p-2 jumbotron" style="display: none;">
-          <div id="div-order-infor" class="text-white p-3">...</div>
-          <div class="p-2">
-            <button id="button-xacnhan" type="button" class="btn btn-warning w-100" onclick="onButtonXacNhanClick()">Xác nhận</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="container-fluid bg-light p-5">
-  <div class="row text-center">
-    <div class="col-sm-12">
-      <h4 class="m-2">Footer</h4>
-      <a href="#" class="btn btn-dark m-3"><i class="fa fa-arrow-up"></i>To the top</a>
-      <div class="m-2">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-"use strict";
-/*** REGION 1 - Global variables - Vùng khai báo biến, hằng số, tham số TOÀN CỤC */
-//khai báo biến 3 loại combo
-var vSmallButton = document.getElementById("button-small");
-var vMediumButton = document.getElementById("button-medium");
-var vLargeButton = document.getElementById("button-large");
-//khai báo biến 3 loại pizza
-var vHawaiButton = document.getElementById("button-hawai");
-var vSeaFoodButton = document.getElementById("button-seafood");
-var vBaconButton = document.getElementById("button-bacon");
-//khai báo vị trí text
-var vDivContainerSubjectElement = document.getElementById("div-container-order");
-var vDivSubjectInforElement = document.getElementById("div-order-infor");
-//khai báo dữ liệu người dùng nhập
-var vFullnameElement = document.getElementById("inp-fullname");
-var vEmailElement = document.getElementById("inp-email");
-var vDienThoaiElement = document.getElementById("inp-dien-thoai");
-var vDiaChiElement = document.getElementById("inp-dia-chi");
-var vMesageElement = document.getElementById("inp-message");
-var vVoucherElement = document.getElementById("inp-voucher");
-// bạn có thể dùng để lưu trữ combo được chọn, 
-// mỗi khi khách chọn menu S, M, L bạn lại đổi giá trị properties của nó
-var gSelectedMenuStructure = {
-  menuName: "...",    // S, M, L
-  duongKinhCM: 0,
-  suonNuong: 0,
-  saladGr: 0,
-  drink: 0,
-  priceVND: 0
-}
-var gDiscountVouchers = [
-  { voucherID:"A1", percentDiscount: 20 },   // mã giảm giá là A1, phần trăm giảm giá 20%
-  { voucherID:"A2", percentDiscount: 10 },
-  { voucherID:"A3", percentDiscount: 5 },
-  { voucherID:"A4", percentDiscount: 30 },
-  { voucherID:"A5", percentDiscount: 20 },
-  { voucherID:"B1", percentDiscount: 25 },
-  { voucherID:"B2", percentDiscount: 15 },
-  { voucherID:"B3", percentDiscount: 5 },
-  { voucherID:"B4", percentDiscount: 30 },
-  { voucherID:"B5", percentDiscount: 40 }  
-];
-// bạn có thể dùng để lưu loại pizza đươc chọn, mỗi khi khách chọn, bạn lại đổi giá trị cho nó
-var gSelectedPizzaType = "..." ;
-//khai báo get cho sever
-const gREQUEST_STATUS_FINISH_AND_OK = 200;
-var vPriceElement = 0; //giá thực trả sau khi giảm giá
-var vDiscountElement = 0; //giá discount
-/*** REGION 2 - Vùng gán / thực thi hàm xử lý sự kiện cho các elements */
-
-/*** REGION 3 - Event handlers - Vùng khai báo các hàm xử lý sự kiện */
-//selected the size S
-function onSmallClick(){
-  "use strict";
-  gSelectedMenuStructure.menuName = "S";
-  gSelectedMenuStructure.duongKinhCM = 20 + "cm";
-  gSelectedMenuStructure.suonNuong = 2;
-  gSelectedMenuStructure.saladGr = 200 + "g";
-  gSelectedMenuStructure.drink = 2;    
-  gSelectedMenuStructure.priceVND = 150000;
-  // method display plan infor
-  console.log(gSelectedMenuStructure);
-  //chuyển đổi màu button
-  vSmallButton.classList = "btn btn-warning";
-  vMediumButton.classList = "btn btn-success";
-  vLargeButton.classList = "btn btn-success";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//select size M
-function onMediumClick(){
-  "use strict";
-  gSelectedMenuStructure.menuName = "M";
-  gSelectedMenuStructure.duongKinhCM = 25 + "cm";
-  gSelectedMenuStructure.suonNuong = 4;
-  gSelectedMenuStructure.saladGr = 300 + "g";
-  gSelectedMenuStructure.drink = 3;
-  gSelectedMenuStructure.priceVND = 200000;
-  // method display plan infor
-  console.log(gSelectedMenuStructure);
-  //chuyển đổi màu button
-  vSmallButton.classList = "btn btn-success";
-  vMediumButton.classList = "btn btn-warning";
-  vLargeButton.classList = "btn btn-success";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//select size L
-function onLargeClick(){
-  "use strict";
-  gSelectedMenuStructure.menuName = "L";
-  gSelectedMenuStructure.duongKinhCM = 30 + "cm";
-  gSelectedMenuStructure.suonNuong = 8;
-  gSelectedMenuStructure.saladGr = 500 + "g";
-  gSelectedMenuStructure.drink = 4;
-  gSelectedMenuStructure.priceVND = 250000;
-  //hiện ra console
-  console.log(gSelectedMenuStructure);
-  //chuyển đổi màu button
-  vSmallButton.classList = "btn btn-success";
-  vMediumButton.classList = "btn btn-success";
-  vLargeButton.classList = "btn btn-warning";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//pizza hawai
-function onHawaiClick(){
-  "use strict";
-  gSelectedPizzaType = "Pizza Hawai";
-  // method display plan infor
-  console.log(gSelectedPizzaType);
-  //chuyển đổi màu button
-  vHawaiButton.classList = "btn btn-warning w-100";
-  vSeaFoodButton.classList = "btn btn-info w-100";
-  vBaconButton.classList = "btn btn-info w-100";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//pizza seafood
-function onSeaFoodClick(){
-  "use strict";
-  gSelectedPizzaType = "Pizza SeaFood";
-  // method display plan infor
-  console.log(gSelectedPizzaType);
-  //chuyển đổi màu button
-  vHawaiButton.classList = "btn btn-info w-100";
-  vSeaFoodButton.classList = "btn btn-warning w-100";
-  vBaconButton.classList = "btn btn-info w-100";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//pizza bacon
-function onBaconClick(){
-  "use strict";
-  gSelectedPizzaType = "Pizza Bacon";
-  // method display plan infor
-  console.log(gSelectedPizzaType);
-  //chuyển đổi màu button
-  vHawaiButton.classList = "btn btn-info w-100";
-  vSeaFoodButton.classList = "btn btn-info w-100";
-  vBaconButton.classList = "btn btn-warning w-100";
-  vDivContainerSubjectElement.style.display = 'none';
-}
-//gửi đơn hàng
-function onButtonSendClick() {
-  var vPerson = {
-    fullname: "",
-    email: "",
-    dienthoai: 0,
-    diachi: "",
-    message:"",
-    voucher: ""
-  }
-  debugger;
-  getFormData(vPerson);
-  var vIsValidData = validateData(vPerson);//kiểm tra dữ liệu
-  if (vIsValidData === false && vPerson.voucher === "" ){
-    alert("Vui lòng nhập thông tin");
-  }else if( vIsValidData === true && vPerson.voucher === "" ){
-    vPriceElement = gSelectedMenuStructure.priceVND;
-    vDiscountElement = 0;
-    showData();
-  }else{
-    getVoucher();
-    //ghi dữ liệu vào vùng màu vàng
-    showData();
-  }
-}
-//xác nhận đơn hàng
-function onButtonXacNhanClick(){
-  var result = confirm("Bạn có muốn tiếp tục đặt hàng?");
-  if (result == true) {
-    alert("Cám ơn bạn đã đặt hàng! Chúng tôi sẽ liên hệ lại với bạn!");
-    vDivContainerSubjectElement.style.display = 'none';
-  } else {
-    alert("Đơn hàng của bạn đã được hủy!");
-  }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course 365 - Learning with unlimited!</title>
   
-}
-/*** REGION 4 - Common funtions - Vùng khai báo hàm dùng chung trong toàn bộ chương trình*/
-//hiện thỉ data ra cửa sổ xác nhận
-function showData(){
-  "use strict";
-  //hiển thị vùng dữ liệu
-  vDivContainerSubjectElement.style.display = 'block';
-  //hiển dữ liệu ra html
-  vDivSubjectInforElement.innerHTML = "Họ và tên: " + vFullnameElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>Email: " + vEmailElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>Điện thoại: " + vDienThoaiElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>Địa chỉ: " + vDiaChiElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>Lời nhắn: " + vMesageElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>----------------------------------------";
-  vDivSubjectInforElement.innerHTML += "<br/Kích cỡ: " + gSelectedMenuStructure.menuName;
-  vDivSubjectInforElement.innerHTML += "<br/>Đường kính: " + gSelectedMenuStructure.duongKinhCM;
-  vDivSubjectInforElement.innerHTML += "<br/>Sườn nướng: " + gSelectedMenuStructure.suonNuong;
-  vDivSubjectInforElement.innerHTML += "<br/>Salad: " + gSelectedMenuStructure.saladGr;
-  vDivSubjectInforElement.innerHTML += "<br/>Nước ngọt: " + gSelectedMenuStructure.drink;
-  vDivSubjectInforElement.innerHTML += "<br/>----------------------------------------";
-  vDivSubjectInforElement.innerHTML += "<br/>Loại Pizza: " + gSelectedPizzaType;
-  vDivSubjectInforElement.innerHTML += "<br/>Mã voucher: " + vVoucherElement.value;
-  vDivSubjectInforElement.innerHTML += "<br/>Giá vnd: " + gSelectedMenuStructure.priceVND;
-  vDivSubjectInforElement.innerHTML += "<br/>Discount %: " + vDiscountElement;
-  vDivSubjectInforElement.innerHTML += "<br/>Phải thanh toán: " + vPriceElement;
-  //hiển dữ liệu ra console
-  console.log("Họ và tên: " + vFullnameElement.value);
-  console.log("Email: " + vEmailElement.value);
-  console.log("Điện thoại: " + vDienThoaiElement.value);
-  console.log(">Địa chỉ: " + vDiaChiElement.value);
-  console.log("Lời nhắn: " + vMesageElement.value);
-  console.log("----------------------------------------");
-  console.log("Kích cỡ: " + gSelectedMenuStructure.menuName);
-  console.log("Đường kính: " + gSelectedMenuStructure.duongKinhCM);
-  console.log("Sườn nướng: " + gSelectedMenuStructure.suonNuong);
-  console.log("Salad: " + gSelectedMenuStructure.saladGr);
-  console.log("Nước ngọt: " + gSelectedMenuStructure.drink);
-  console.log("----------------------------------------");
-  console.log("Loại Pizza: " + gSelectedPizzaType);
-  console.log("Mã voucher: " + vVoucherElement.value);
-  console.log("Giá vnd: " + gSelectedMenuStructure.priceVND);
-  console.log("Discount %: " + vDiscountElement);
-  console.log("Phải thanh toán: " + vPriceElement);
-}
-//thu thập dữ liệu
-function getFormData(paramPerson) {    
-  "use strict";
-  //gán giá trị cho đối tượng 
-  paramPerson.fullname = vFullnameElement.value.trim();
-  paramPerson.email = vEmailElement.value.trim();
-  paramPerson.dienthoai = parseInt(vDienThoaiElement.value.trim());
-  paramPerson.diachi = vDiaChiElement.value.trim();
-  paramPerson.message = vMesageElement.value.trim();
-  paramPerson.voucher = vVoucherElement.value.trim();
-}
-
-//hàm kiểm tra dữ liệu nhập trên form
-function validateData(paramPerson) {
-  "use strict";
-  if (paramPerson.fullname === "") {
-    alert("Phải nhập vào tên");
-    return false;
-  }
-
-  if (!paramPerson.email.includes("@")) {
-    alert("Email không hợp lệ");
-    return false;
-  }
-
-  if (isNaN(paramPerson.dienthoai)) {
-    alert("Điện thoại không hợp lệ");
-    return false;
-  }
-
-  if (paramPerson.diachi === "") {
-    alert("Phải nhập vào địa chỉ");
-    return false;
-  }
-  return true;
-}
-//hàm kiểm tra voucher
-function getVoucher() {
-  "use strict";
-  var vVoucher = vVoucherElement.value;
-  var vFound = false;
-  var vIndex = 0;
-  while (!vFound && vIndex < gDiscountVouchers.length){
-    if (gDiscountVouchers[vIndex].voucherID == vVoucher) {
-      var vResultCheckElement= gDiscountVouchers[vIndex].percentDiscount;
-      vDiscountElement = gSelectedMenuStructure.priceVND*(vResultCheckElement/100);
-      vPriceElement = gSelectedMenuStructure.priceVND-vDiscountElement;      
-      vFound = true;
-    }else{
-      vIndex ++ ;
-    }
-  }  
-  if(vFound == false){
-    vPriceElement = gSelectedMenuStructure.priceVND;
-    vDiscountElement = 0;
-    alert("Mã Voucher không tồn tại");
-  }
-  return vPriceElement, vDiscountElement;
-}
-</script>
+  <!-- Nhúng các thư viện BS4 & jQuery, awesome font -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <!-- Các file css và js tự định nghĩa thêm -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <!-- 1. Header - Navbar menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Ionic_logo.png" alt="">
+      </a>    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Browse courses
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Web Development</a>
+              <a class="dropdown-item" href="#">Mobile App</a>
+              <a class="dropdown-item" href="#">Desktop App</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Vision & Mission</a>
+              <a class="dropdown-item" href="#">Team</a>
+              <a class="dropdown-item" href="#">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- 2. Slide body -->
+    <div class="container-fluid bg-primary pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 pt-4 text-left">
+            <h1 class="text-white">Welcome to Ionic Course365 Learning Center</h1>
+            <p class="text-white-50">Ionic Course365 is an online learning and teaching marketplace with over 5000 courses and 1 million students. Instructor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
+            <button class="btn btn-warning">Browse Courses</button>
+            <button class="btn btn-light">Become an Instructor</button>
+          </div>
+          <div class="col-md-6">
+            <div id="" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/ionic-207965.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 3. Courses content -->
+    <div class="container pt-2">
+      <div class="row pb-3">
+        <h1>Recommend to you</h1>
+      </div>
+      <div class="row">
+          <div class="card-deck">
+            <div class="card">
+              <img src="images/courses/course-angular.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">How to easily create a website with Angular</h5>
+                <i class="far fa-clock text-muted"> 3h 56m Beginer</i>
+                <h6 class="mt-3 ">$600 <span class="text-secondary">$700</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/morris_mccoy.jpg" class="img-footer">
+                <small class="text-muted">Morris Mccoy</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-python.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">The Python Course: build web application</h5>
+                <i class="far fa-clock text-muted"> 4h 30m Advanced</i>
+                <h6 class="mt-3 ">$900 <span class="text-secondary">$1050</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/claire_robertson.jpg" class="img-footer">
+                <small class="text-muted">Claire Robertson</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-graphql.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">GraphQL: introduction to graphQL for beginners</h5>
+                <i class="far fa-clock text-muted"> 2h 15m Intermediate</i>
+                <h6 class="mt-3 ">$650 <span class="text-secondary">$1050</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/ted_hawkins.jpg" class="img-footer">
+                <small class="text-muted">Ted Hawkins</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Getting Started with JavaScript</h5><br>
+                <i class="far fa-clock text-muted"> 3h 34m Beginer</i>
+                <h6 class="mt-3 ">$300 <span class="text-secondary">$550</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/ted_hawkins.jpg" class="img-footer">
+                <small class="text-muted">Ted Hawkins</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container pt-3">
+      <div class="row pb-3">
+        <h1>Most Popular</h1>
+      </div>
+      <div class="row">
+          <div class="card-deck">
+            <div class="card">
+              <img src="images/courses/course-css.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">CSS: ultimate CSS course from beginner to advanced</h5>
+                <i class="far fa-clock text-muted"> 3h 56m Beginer</i>
+                <h6 class="mt-3 ">$600 <span class="text-secondary">$750</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/juanita_bell.jpg" class="img-footer">
+                <small class="text-muted">Juanita Bell</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Getting Started with JavaScript</h5><br>
+                <i class="far fa-clock text-muted"> 3h 34m Beginer</i>
+                <h6 class="mt-3 ">$300 <span class="text-secondary">$550</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/ted_hawkins.jpg" class="img-footer">
+                <small class="text-muted">Ted Hawkins</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-wordpress.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Complete Wordpress themes & plugins</h5>
+                <i class="far fa-clock text-muted"> 4h 30m Advanced</i>
+                <h6 class="mt-3 ">$900 <span class="text-secondary">$1050</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/clevaio_simon.jpg" class="img-footer">
+                <small class="text-muted">Clevaio Simon</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-graphql.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">GraphQL: introduction to graphQL for beginners</h5>
+                <i class="far fa-clock text-muted"> 2h 15m Intermediate</i>
+                <h6 class="mt-3 ">$650 <span class="text-secondary">$1050</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/ted_hawkins.jpg" class="img-footer">
+                <small class="text-muted">Ted Hawkins</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container pt-3">
+      <div class="row pb-3">
+        <h1>Trending</h1>
+      </div>
+      <div class="row">
+          <div class="card-deck">
+            <div class="card">
+              <img src="images/courses/course-javascript.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">Getting Started with JavaScript</h5><br>
+                <i class="far fa-clock text-muted"> 3h 34m Beginer</i>
+                <h6 class="mt-3 ">$300 <span class="text-secondary">$550</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/ted_hawkins.jpg" class="img-footer">
+                <small class="text-muted">Ted Hawkins</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-angular.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">How to easily create a website with Angular</h5>
+                <i class="far fa-clock text-muted"> 3h 56m Beginer</i>
+                <h6 class="mt-3 ">$600 <span class="text-secondary">$700</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/morris_mccoy.jpg" class="img-footer">
+                <small class="text-muted">Morris Mccoy</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-css.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">CSS: ultimate CSS course from beginner to advanced</h5>
+                <i class="far fa-clock text-muted"> 3h 56m Beginer</i>
+                <h6 class="mt-3 ">$600 <span class="text-secondary">$750</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/juanita_bell.jpg" class="img-footer">
+                <small class="text-muted">Juanita Bell</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/courses/course-python.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title text-primary">The Python Course: build web application</h5>
+                <i class="far fa-clock text-muted"> 4h 30m Advanced</i>
+                <h6 class="mt-3 ">$900 <span class="text-secondary">$1050</span></h6>
+              </div>
+              <div class="card-footer">
+                <img src="images/teacher/claire_robertson.jpg" class="img-footer">
+                <small class="text-muted">Claire Robertson</small>
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+      <!-- 4. Footer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pt-3 footer">
+          <p >© 2021 Ionic Course365. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 pt-3 footer text-right">
+          <a class="footer-link" href="#">Privacy</a>
+          <a class="footer-link" href="#">Terms</a>
+          <a class="footer-link" href="#">Feedback</a>
+          <a class="footer-link" href="#">Support</a>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
